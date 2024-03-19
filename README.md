@@ -62,11 +62,11 @@ POSTGRES_PASSWORD=pass<br>
 POSTGRES_DB=db<br>
 ADMIN_TOKEN=eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81<br>
 
-### лог развертывания на сервере
+### Лог развертывания на сервере
 
 ![изображение](https://github.com/shiltsov/MOBC_pp_fastapi/assets/54742337/539fa820-8ed8-4d10-81ce-65ffd3ec103a)
 
-## Скрины из Postman 
+### Скрины из Postman 
 
 ![изображение](https://github.com/shiltsov/MOBC_pp_fastapi/assets/54742337/eb554fee-8f81-44a2-81d8-4df2e54e84d9)
 
