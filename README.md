@@ -28,7 +28,7 @@
 реализованы ручки
 
 общедоступные ручки
-- `GET /` - выдает приветственоное сообщение на испанском языке
+- `GET /` - выдает приветственное сообщение на испанском языке
 - `POST /predict` требует отправки текстового файла (file) возвращает предикт (id автора, имя автора, уверенность модели в ответе)
 - `POST /vote` - требует начение vote (от 1 до 5) возвращает ответ что проголосовали либо выбрасывает ошибку если неверное число
 - `GET /stat` - возвращает статистику голосований (число голосовавших и средний рейтинг)
@@ -42,18 +42,20 @@
 
 ## Пояснение по структуре проекта
 
-app - приложение<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;models - выгруженные модели<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;routers - раутеры<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;common.py - общие<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;admin.py - требующие авторизации <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;schemas.py - схемы данных<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;database.py - интерфейс с базой<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;models.py - ORM (таблицы)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main.py - старт<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ml.py - все что связано с ML<br>
+`app` - приложение<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`models` - выгруженные модели<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`routers` - раутеры<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`common.py` - общие<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`admin.py` - требующие авторизации <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`schemas.py` - схемы данных<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`database.py` - интерфейс с базой<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`models.py` - ORM (таблицы)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`main.py` - старт<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`ml.py` - все что связано с ML<br>
 
-initdb - папка куда помещаем SQL для начальной загрузки базы (сделано отдельно через SqlAlchimi - файл create_sql.py) докер оттуда автоматически все загрузит при старте
+`initdb` - папка куда помещаем SQL для начальной загрузки базы (сделано отдельно через SqlAlchimy - файл create_sql.py) докер оттуда автоматически все загрузит при старте
+
+в корне также лежат 3 текстовых файла `test-pushkin.txt` `test-simple.txt` `test-turgenev.txt` - чтобы не искать чем тестить
 
 ## Инструкция по развертыванию
 
