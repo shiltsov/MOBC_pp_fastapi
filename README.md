@@ -43,15 +43,15 @@
 ## Пояснение по структуре проекта
 
 app - приложение<br>
-   models - выгруженные модели
-   routers - раутеры<br>
-      common.py - общие<br>
-      admin.py - требующие авторизации <br>
-   schemas.py - схемы данных<br>
-   database.py - интерфейс с базой<br>
-   models.py - ORM (таблицы)<br>
-   main.py - старт<br>
-   ml.py - все что связано с ML<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;models - выгруженные модели<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;routers - раутеры<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;common.py - общие<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;admin.py - требующие авторизации <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;schemas.py - схемы данных<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;database.py - интерфейс с базой<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;models.py - ORM (таблицы)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main.py - старт<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ml.py - все что связано с ML<br>
 
 initdb - папка куда помещаем SQL для начальной загрузки базы (сделано отдельно через SqlAlchimi - файл create_sql.py) докер оттуда автоматически все загрузит при старте
 
