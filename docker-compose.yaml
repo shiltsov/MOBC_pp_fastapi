@@ -1,0 +1,55 @@
+version: '3.7'
+
+services:
+
+  fastapi:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    expose:
+      - 8000
+    networks:
+      fastapi-network:
+        aliases:
+            - web
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgres:latest
+    ports:
+      - 6432:5432 # на всякий случай проброшу наружу тоже
+    expose:
+      - 5432
+    networks:
+      fastapi-network:
+        aliases:
+            - db
+            - database
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d
+      - ./pg_data:/var/lib/postgresql/data
+    env_file:
+      - ./app/.env
+
+
+  redis:
+    image: redis:latest
+    ports:
+      - 6379:6379
+    expose:
+      - 6379
+    networks:
+      fastapi-network:
+        aliases:
+            - redis
+
+
+
+networks:
+  fastapi-network:
+    driver: bridge
+
